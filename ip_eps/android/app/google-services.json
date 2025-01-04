@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "756334016242",
+    "project_id": "ip-eps",
+    "storage_bucket": "ip-eps.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756334016242:android:9cafc39889fafe1500026b",
+        "android_client_info": {
+          "package_name": "com.company.ipeps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBivdadhNS8kOpTkPxLTPI8m1DlI1ZgQ2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756334016242:android:f3a3d8db6aaa9bf000026b",
+        "android_client_info": {
+          "package_name": "com.example.ipeps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBivdadhNS8kOpTkPxLTPI8m1DlI1ZgQ2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
