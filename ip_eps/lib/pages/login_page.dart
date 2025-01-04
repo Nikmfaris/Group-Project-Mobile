@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ip_eps/components/my_button.dart';
 import 'package:ip_eps/components/my_textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -42,9 +43,26 @@ class LoginPage extends StatelessWidget {
                       style: TextStyle(color: Colors.green, fontSize: 15)),
                 ],
               ),
+              const SizedBox(height: 25),
               //sign in button
+              MyButton(text: "login", onTap: () {}),
 
               //dont have account
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Don't have an account?",
+                      style: TextStyle(color: Colors.green, fontSize: 15)),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Text("  Register here",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold)),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

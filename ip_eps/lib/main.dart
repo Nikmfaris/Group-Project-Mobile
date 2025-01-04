@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ip_eps/pages/home_page.dart';
 import 'package:ip_eps/pages/login_page.dart';
+import 'package:ip_eps/pages/navigation/ipgeo.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: HomePage(),
+
+      //MIGHT IMPLEMENT LATE
+      // initialRoute: '/home',
+      // routes: {
+      //   '/': (context) => LoginPage(),
+      //   '/home': (context) => HomePage(),
+      //   '/login': (context) => LoginPage(),
+      //   '/ipgeo': (context) => IpGeoPage(),
+      // },
       debugShowCheckedModeBanner: false,
     );
   }

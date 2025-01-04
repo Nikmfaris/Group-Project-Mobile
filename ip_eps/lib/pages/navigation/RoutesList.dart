@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
-import 'package:ip_eps/pages/navigation/MapPage.dart';
-import 'package:ip_eps/pages/navigation/MoneyPage.dart';
-import 'package:ip_eps/pages/navigation/ProfilePage.dart';
 import 'package:ip_eps/pages/navigation/ipgeo.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,9 +14,10 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     IpGeoPage(),
-    MapPage(),
-    MoneyPage(),
-    ProfilePage(),
+    SearchPage(),
+    HighlightsPage(),
+    SettingsPage(),
+    KoreanPage(),
   ];
 
   void _handleIndexChanged(int index) {
@@ -47,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         items: [
           FlashyTabBarItem(
             icon: Icon(Icons.event),
-            title: Text('IP'),
+            title: Text('IP Geo Location'),
           ),
           FlashyTabBarItem(
             icon: Icon(Icons.map),
