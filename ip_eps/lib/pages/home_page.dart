@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:ip_eps/pages/navigation/MapPage.dart';
 import 'package:ip_eps/pages/navigation/MoneyPage.dart';
 import 'package:ip_eps/pages/navigation/ProfilePage.dart';
@@ -22,6 +22,13 @@ class _HomePageState extends State<HomePage> {
     ProfilePage(),
   ];
 
+  final List<Color> _backgroundColors = [
+    Colors.blueAccent,
+    Colors.greenAccent,
+    Colors.orangeAccent,
+    Colors.purpleAccent,
+  ];
+
   void _handleIndexChanged(int index) {
     setState(() {
       _selectedIndex = index;
@@ -31,37 +38,26 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('main page'),
-        backgroundColor: Colors.blue,
-      ),
-      extendBody: true,
       body: IndexedStack(
         index: _selectedIndex,
         children: _pages,
       ),
-      bottomNavigationBar: FlashyTabBar(
-        selectedIndex: _selectedIndex,
-        showElevation: true,
-        onItemSelected: _handleIndexChanged,
-        items: [
-          FlashyTabBarItem(
-            icon: Icon(Icons.event),
-            title: Text('IP'),
-          ),
-          FlashyTabBarItem(
-            icon: Icon(Icons.map),
-            title: Text('Search'),
-          ),
-          FlashyTabBarItem(
-            icon: Icon(Icons.monetization_on),
-            title: Text('Settings'),
-          ),
-          FlashyTabBarItem(
-            icon: Icon(Icons.settings),
-            title: Text('한국어'),
-          ),
+      bottomNavigationBar: CurvedNavigationBar(
+        index: _selectedIndex,
+        height: 60.0,
+        items: <Widget>[
+          Icon(Icons.event, size: 20),
+          Icon(Icons.map, size: 20),
+          Icon(Icons.monetization_on, size: 20),
+          Icon(Icons.settings, size: 20),
         ],
+        color: Colors.white,
+        buttonBackgroundColor: Colors.white,
+        backgroundColor: _backgroundColors[_selectedIndex],
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 600),
+        onTap: _handleIndexChanged,
+        letIndexChange: (index) => true,
       ),
     );
   }
